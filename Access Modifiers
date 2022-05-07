@@ -1,0 +1,69 @@
+Public Members:
+--------------->>>>
+
+Public members are accessible anywhere from the class. All the member variables of the class are by default public.
+
+class edpresso:
+    # constructor
+    def __init__(self, name, project):
+        self.name = name;
+        self.project = project;
+
+    def displayProject(self): 
+        # accessing public data member 
+        print("Project: ", self.project)
+
+# creating object of the class 
+edp = edpresso("TeamPhoenix", 1);
+
+# accessing public data member 
+print("Name: ", edp.name)  
+
+# calling public member function of the class 
+edp.displayProject()
+
+Protected Members
+----------------->>>
+
+Protected members are accessible within the class and also available to its sub-classes. To define a protected member, prefix the member name with a single underscore “_”.
+
+
+class edpresso:
+    def __init__(self, name, project):
+        self._name = name
+        self._project = project
+
+# creating object of the class 
+edp = edpresso("TeamPhoenix", 2)
+
+# direct access of protected member
+print("Name:",edp._name)
+print("project:",edp._project)
+
+The variable name and project of class edpresso are protected; hence, it is accessed as _name, and _project respectively.
+
+Private Members
+---------------->>>>
+
+Private members are accessible within the class. To define a private member, prefix the member name with a double underscore “__”.
+
+# program to illustrate private access modifier in a class
+
+class edpresso:
+   def __init__(self, name, project):
+      # public variable
+      self.name = name
+      # private variable
+      self.__project = project
+
+# creating an instance of the class Sample
+edp = edpresso('TeamPhoenix', 3)
+
+# accessing public variable name
+print("Name:",edp.name)
+
+# accessing private variable __project using 
+# _Edpresso__project name
+print("Project:",edp._edpresso__project)
+
+In class edpresso, __project is a private variable; hence, it is accessed by creating an instance.
